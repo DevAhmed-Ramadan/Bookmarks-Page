@@ -1,0 +1,80 @@
+body {
+    background-color: #F7ECDE;
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+body ::selection
+{
+    background-color: #eca93e;
+}
+
+header div {
+    margin-top: 35px;
+    margin-bottom: 80px;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    background-color: #FEC260;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    height: 20px;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+
+h1:hover::after
+{
+    height: 40px;
+}
+
+
+
+h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #dacf57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content
+{
+    border-block: 2px dotted #352e28 ;
+}
+
+#sumbit-btn
+{
+    background-color: #d99c39;
+}
+
+.form-control:focus
+{
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+button.edit:hover i
+{
+    animation: fa-bounce .5s;
+}
+
+button.del:hover i
+{
+    animation: fa-shake 1.5s;
+}
+
+button.visit:hover i 
+{
+    animation: fa-flip .6s;
+}

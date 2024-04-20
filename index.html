@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmarks</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <!-- end fonts -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="d-flex justify-content-center ">
+            <h1 class="m-0 position-relative ">
+                Bookmarker
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content mb-4">
+                <h2 class="text-center my-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="mb-4">
+                    <label for="siteName" class="mb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input oninput="validSite(siteNameRegex , this)" id="siteName" type="text" class="form-control" placeholder="Bookmark Name" required>
+                    <p class="text-danger pt-2 d-none">bookmark name must start with at least 3 characters</p>
+                </div>
+                <div class="mb-4">
+                    <label for="siteUrl" class="mb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input oninput="validSite(siteUrlRegex , this)" id="siteUrl" type="text" class="form-control" placeholder="Website URL" required>
+                    <p class="text-danger pt-2 d-none">Enter a valid URL (Protocol Optional)</p>
+                </div>
+                <div class="d-flex justify-content-center mt-4 mb-2">
+                    <button id="sumbit-btn" onclick="addSite()" type="button"
+                        class="btn text-black px-5 fw-semibold sumbit d-block ">Submit</button>
+                    <button id="update-btn" onclick="update()" type="button"
+                        class="btn btn-primary text-white px-5 fw-semibold d-none">update</button>
+                </div>
+            </div>
+            <table class="table text-center" style="vertical-align: middle;">
+                <thead class="table-light">
+                    <td>Index</td>
+                    <td>Website Name</td>
+                    <td>Visit</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </thead>
+                <tbody id="tableContent">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
